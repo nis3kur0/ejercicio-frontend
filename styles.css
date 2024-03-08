@@ -142,8 +142,8 @@ p {
         color: #150c42;
         margin-bottom: 10px;
     }
-
-    input[type="email"] {
+      
+    input {
         flex: 1;
         width: 300px;
         border-radius: 5px;
@@ -154,6 +154,7 @@ p {
         text-decoration: none;
         margin-right: 10px;
     }
+    
 }
 
 .newsletter-image {

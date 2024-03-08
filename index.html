@@ -31,8 +31,7 @@
          <form id="newsletter-form" action="#" method="post">
             <div class="form-group">
                 <label for="email">Email adress:</label>  
-                <input type="email" id="email" name="email" required placeholder="email@company.com">
-                
+                <input id="email" name="email" placeholder="email@company.com" >
             </div>
             <button id="btm" type="submit">Subscribe to monthly newsletter!</button>
          </form>
@@ -43,20 +42,7 @@
         <img src="./assets/images/illustration-sign-up-desktop.svg" alt="sign-up" />
     </div>
     
-
 </body>
+<script src="script.js"></script>
 
-
-<script>
-    document.getElementById('newsletter-form').addEventListener('submit', function(event) {
-      const emailInput = document.getElementById('email');
-      const email = emailInput.value;
-    
-      if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-        alert('Please enter a valid email address.');
-        event.preventDefault(); // Prevent form submission
-      }
-    });
-    
-    </script>
 </html>
