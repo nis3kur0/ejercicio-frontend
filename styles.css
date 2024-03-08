@@ -1,0 +1,197 @@
+
+:root {
+    --tomato: hsl(4, 100%, 67%);
+    --tomato-light: hsl(4, 100%, 95%);
+    --dark-slate-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+    --gradient-pink: #ff3e83;
+    --gradient-orange: #fd634a;
+    --gradient-shadow: #ff3e8355;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("./assets/fonts/Roboto-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('./assets/fonts/Roboto-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--charcoal-grey);
+}
+
+.newsletter-container {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    max-width: 850px;
+    height: 600px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.newsletter-text {
+    display: flex;
+    flex: 1;
+    box-sizing: content-box;
+    margin-bottom: 20px;
+    padding-left: 25px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.custom-list {
+    list-style: none;
+    font-family: roboto;
+    padding-left: 0;
+}
+
+.custom-list li {
+    padding-left: 20px;
+    margin-bottom: 20px;
+    background-image: url("./assets/images/icon-success.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 16px 16px;
+}
+
+h1 {
+    font-family: roboto-bold;
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--charcoal-grey);
+}
+
+p {
+    font-family: roboto;
+    font-weight: 400;
+    margin-right: 80px;
+    font-size: 16px;
+}
+
+#btm {
+    background-color: var(--charcoal-grey);
+    color: #fff;
+    width: 350px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-family: roboto-bold;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+#btm:hover {
+    background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+    border: 0;
+    border-radius: 5px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: roboto-bold;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2.5;
+    outline: transparent;
+    padding: 0 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+  }
+
+  #btm:not([disabled]):focus {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+  }
+  
+  #btm:not([disabled]):hover {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+  }
+  
+.form-group {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+
+    label {
+        font-family: roboto-bold;
+        flex: 1;
+        color: #150c42;
+        margin-bottom: 10px;
+    }
+
+    input[type="email"] {
+        flex: 1;
+        width: 300px;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        text-align: left;
+        text-decoration: none;
+        margin-right: 10px;
+    }
+}
+
+.newsletter-image {
+    height: 100%;
+}
+
+.newsletter-image img {
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .newsletter-container {
+      flex-direction: column-reverse;
+      width: 95%;
+      padding: 0;
+    }
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    .newsletter-container h1 {
+      font-size: 30px;
+    }
+    .newsletter-image {
+      width: 100%;
+      padding: 20px;
+    }
+    .newsletter-text {
+      width: 100%;
+    }
+    .newsletter-image img {
+        background-image: src("./assets/images/illustration-mobile.svg"); 
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    form {
+      width: 90%;
+    }
+}
+
+  
